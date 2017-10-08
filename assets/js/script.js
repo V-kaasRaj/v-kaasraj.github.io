@@ -175,17 +175,14 @@ $(function () {
 
   $('.lightbox-trigger').click(function () {
     let index = $('.lightbox-trigger').index($(this));
-
-    $('.lightbox').css({
-      display : 'block'
-    })
-
+    let imgId = $(this).attr('data-lbimg');
+    $('.lightbox').fadeIn(300)
+    $('.lightbox-img-container img').removeClass('is-img-show');
+    $(imgId).addClass('is-img-show');
   })
 
   $('.close-btn').click(() => {
-    $('.lightbox').css({
-      display :'none'
-    })
+    $('.lightbox').fadeOut(300)
   })
 
   $('.back-btn').click(() => {

@@ -1889,15 +1889,15 @@ a, a:hover, a:visited {
     transition: all .3s ease-in-out;
     position: relative; }
     .gallery .box.box-1 {
-      background: url("../images/bubbles.jpg") no-repeat;
+      background: url("../images/player.jpg") no-repeat;
         background-size: cover;
         background-position: center; }
     .gallery .box.box-2 {
-      background: url("../images/bubbles.jpg") no-repeat;
+      background: url("../images/ball.jpg") no-repeat;
         background-size: cover;
         background-position: center; }
     .gallery .box.box-3 {
-      background: url("../images/ball.jpg") no-repeat;
+      background: url("../images/vr.jpg") no-repeat;
         background-size: cover;
         background-position: center; }
     .gallery .box.box-4 {
@@ -1913,7 +1913,7 @@ a, a:hover, a:visited {
         background-size: cover;
         background-position: center; }
     .gallery .box.box-7 {
-      background: url("../images/vr.jpg") no-repeat;
+      background: url("../images/bubbles.jpg") no-repeat;
         background-size: cover;
         background-position: center; }
     .gallery .box.box-8 {
