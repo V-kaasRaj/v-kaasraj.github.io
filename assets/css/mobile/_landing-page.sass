@@ -1,0 +1,62 @@
+.social-nav
+  display: none
+  ul
+    padding: 0
+    margin: 0
+    li
+      list-style-type: none
+      margin: 2.5rem 0
+
+.hero
+  transform: translateY(-3.5rem)
+  .pic-wrapper
+    animation: rotateMove 1s ease-in-out forwards
+    opacity: 0
+    transform: translateX(-30rem) rotate(-180deg)
+    @keyframes rotateMove
+      80%
+        opacity: .6
+      100%
+        opacity: 1
+        transform: translateX(0) rotate(0deg)
+    .pic-container
+      +size(80%, 23rem)
+      background-color: $light
+      box-shadow: 1rem 1rem 2rem #000
+    img
+      position: absolute
+      bottom: 0
+      width: 20rem
+      left: -1.5rem
+      filter: drop-shadow(.25rem 0 1rem transparentize($dark, .5))
+  .name-container
+    position: absolute
+    bottom: -4rem
+    width: 75%
+    animation: rotateMove2 1s ease-in-out forwards
+    opacity: 0
+    transform: translateX(10rem)
+    @keyframes rotateMove2
+      80%
+        opacity: .6
+      100%
+        opacity: 1
+        transform: translateX(0)
+    .name-wrapper
+      border: .3rem solid $white
+      padding: 2.3rem 0
+      .name
+        position: relative
+        transform: translateX(-5rem)
+        p
+          padding: 0 .7em
+          font-size: 2.5rem
+          position: relative
+          z-index: 1
+          letter-spacing: .15em
+          background: $blue
+      .designation
+        p
+          font-size: .85rem
+          letter-spacing: .3em
+          margin: 0 0 0 1.5em

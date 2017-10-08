@@ -1,0 +1,61 @@
+.portfolio
+  .showcase
+    position: relative
+    transform: translateY(-3rem)
+    ul
+      li
+        display: inline-block
+        position: relative
+      .slides
+        margin: 2.5rem 0
+        position: relative
+        +size(35rem,25rem)
+        .slide
+          +size(100%,25rem)
+          background: $light
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%,-50%)
+          opacity: 0
+          transition: all .4s ease-in-out
+          &.is-slide-show
+            opacity: 1
+        .slide-2
+          background: $red
+        .slide-3
+          background: $blue
+        .slide-4
+          background: lightgreen
+      .fa
+        font-size: 1.5rem
+        +size(2em)
+        border-radius: 50%
+        background: $white
+        color: $dark
+        line-height: 2em
+        cursor: pointer
+        position: absolute
+        z-index: 5
+        &:hover
+          transform: scale(1.2)
+      .fa-caret-right
+        padding-left: .9em
+        right: -1rem
+      .fa-caret-left
+        padding-left: .7em
+        left: -1rem
+    ol
+      li
+        display: inline-block
+        margin: 2rem 2rem
+        +size(8px)
+        background-color: $white
+        border-radius: 50%
+        cursor: pointer
+        transition: all .3s ease-in-out
+        &:hover
+          transform: scale(1.4)
+        &.is-dot-active
+          transform: scale(1.7)
+          background-color: $red

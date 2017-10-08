@@ -1,0 +1,36 @@
+.page.contact
+  .container-fluid
+    .row
+      .col-12.col-md-10.push-md-2
+        .row
+          .col-12.col-md-6
+            .contact-wrapper
+              h2 CONTACT ME
+              .contact-container
+                p.contact-info Thank You !! <br> For visiting my website, <br> if you like my website do let me know. <br> Also, i am currently available for work.<br>
+                  a.resume-attached(href='assets/docs/resume.pdf') Download Resume
+                .link.email-link: a(href="mailto:vikasraj1911@gmail.com") vikasraj1911@gmail.com
+                .link.phone-link: a(href="tel:+917529905454") +91-7529905454
+                .social-link
+                  a(href="https://facebook.com/vkaasraj" target="_blank"): i.fa.fa-facebook.fa-lg
+                  a(href="https://instagram.com/vkasraj" target="_blank"): i.fa.fa-instagram.fa-lg
+                  a(href="https://plus.google.com/u/0/108140611250238059802" target="_blank"): i.fa.fa-google-plus.fa-lg
+                  a(href="https://dribbble.com/vkasraj" target="_blank"): i.fa.fa-dribbble.fa-lg
+                  a(href="https://github.com/vkasraj" target="_blank"): i.fa.fa-github.fa-lg
+          .col-12.col-md-6
+            .form-wrapper
+              form(action="https://formspree.io/vikasraj1911@gmail.com" method="POST")
+                p.lead.text-center(for="name") GET IN TOUCH
+                fieldset
+                  label(for="name") Name
+                  input(type="text" id="name" name="Name" required)
+                fieldset
+                  label(for="email") Email
+                  input(type="email" id="email" name="Email" valid required)
+                fieldset
+                  label(for="message") Message
+                  textarea(id="message"  name="Message" required)
+                fieldset
+                  button(type="submit" name="submit") 
+                    <p>SUBMIT <i class="fa fa-long-arrow-right"></i></p>
+                    <span class="button-bg"></span>

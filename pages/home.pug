@@ -1,0 +1,55 @@
+.home-page#home-page
+  .one#one
+    .header
+      .container-fluid
+        .row
+          .col-12.flex.flex-end
+            .hamburger-icon#menu-icon
+    .hamburger-menu#menu.is-hide
+      ul#list.no-bullets
+        li.hamburger-link HOME
+        li.hamburger-link ABOUT
+        li.hamburger-link PORTFOLIO
+        li.hamburger-link GALLERY
+        li.hamburger-link CONTACT
+      .layer.layer-1.is-hide
+      .layer.layer-2.is-hide
+      .layer.layer-3.is-hide
+      .layer.layer-4.is-hide
+      
+  .two#two
+    .mid-section
+      .container-fluid
+        .row
+          .col-12.col-md-10
+            .scroll-fading-content
+              ul
+                li.page-list.is-show
+                  include landing-page
+                li.page-list
+                  include about
+                li.page-list
+                  include portfolio
+                li.page-list
+                  include gallery
+                li.page-list
+                  include contact
+              
+          .col-12.col-md-2.flex.flex-center
+            .dots-nav
+              ul.no-bullets
+                li.motor.fa.fa-caret-up#motor-up
+                li.dots.is-dot-active(data-tooltip="HOME")
+                li.dots(data-tooltip="ABOUT")
+                li.dots(data-tooltip="PORTFOLIO")
+                li.dots(data-tooltip="GALLERY")
+                li.dots(data-tooltip="CONTACT")
+                li.motor.fa.fa-caret-down#motor-down
+  .three#three
+    .scroll
+      .container-fluid
+        .row
+          .col-12.text-center
+              h6 SCROLL
+              .scroll-line
+    

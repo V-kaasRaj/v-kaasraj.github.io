@@ -1,0 +1,107 @@
+.back-btn
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 5
+  &:hover
+    cursor: pointer
+  .fa-arrow-left
+    +size(3.5rem)
+    background: $red
+    line-height: 3.5rem
+
+.triangle-container
+  margin: 4rem 0
+  .triangle-title
+    font-size: 8rem
+    font-weight: bold
+    position: absolute
+    left: 50%
+    top: 60%
+    transform: translate(-50%,-50%)
+  .triangle-svg
+    width: 25rem
+    margin: 0px auto
+
+.kaushan
+  font-family: 'Kaushan Script', cursive
+
+.font-shadow
+  text-shadow: .12rem .12rem 1rem $red,-.12rem -.12rem 1rem $blue, .25rem .25rem 1rem $ig, -.25rem -.25rem 1rem $blue
+
+hr
+  margin: 3rem auto
+.hr1
+  width: 15%
+
+table
+  margin: 2rem
+  tr
+    td
+      padding: .3em
+
+.skills
+  // margin: 1rem 0
+  h2
+    background: $blue
+    padding: .5rem .5rem .5rem 1rem
+    border-left: .3rem solid $white
+    margin-top: 2rem
+
+.white-bg
+  background: $light
+  padding: 2rem
+  box-shadow: 1rem 1rem 1rem $black
+  margin-top: 2rem
+  .bar-wrapper
+    .bar-outer
+      background: #aaa
+      +size(100%, 1rem)
+      .bar-length
+        background: $white
+        height: 100%
+        position: relative
+        &::before, &::after
+          position: absolute
+          right: 0
+          transform: translate(50%,-50%)
+        &::before
+          background: $black
+          content: attr(data-tooltip)
+          font-size: .8rem
+          padding: .2rem
+          top: -100%
+        &::after
+          content: ''
+          border-left: .5rem solid transparent
+          border-right: .5rem solid transparent
+          border-top: .5rem solid $black
+      .html-bar-length
+        width: 92%
+      .css-bar-length
+        width: 88%
+      .js-bar-length
+        width: 83%
+      .jquery-bar-length
+        width: 82%
+      .ps-bar-length
+        width: 95%
+      .ai-bar-length
+        width: 78%
+      .bootstrap-bar-length
+        width: 83%
+      .sass-bar-length
+        width: 78%
+
+.hobbies
+  .svg-icons
+    svg
+      height: 3rem
+
+.bio-social-link
+  padding-bottom: 6rem
+  a
+    margin: 0 1.5rem
+
+.m-1
+  margin: 2rem 0

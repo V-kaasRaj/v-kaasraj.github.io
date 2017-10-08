@@ -1,0 +1,104 @@
+@import "variables/variables"
+@import "variables/mixins"
+@import "variables/reboot"
+@import "variables/grid"
+
+@font-face
+  font-family: 'fontawesome'
+  src: url('../../fonts/fa.woff2')
+
+::-webkit-scrollbar
+  width: .6rem
+
+::-webkit-scrollbar-track
+  background: $dark
+
+::-webkit-scrollbar-thumb
+  border-radius: 1rem
+  background: $red
+
+html,body
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+  position: relative
+  background: $dark
+  color: $white
+  height: 100%
+  margin: 0
+  padding: 0
+  overflow: hidden
+  line-height: 1.5
+  user-select: none
+
+.preload *
+  transition: none !important
+  animation: none !important
+
+ul.no-bullets, ol.no-bullets
+  padding: 0
+  margin: 0
+  li
+    list-style-type: none
+
+a, a:hover, a:visited
+  color: $white
+  text-decoration: none
+
+.flex
+  display: flex
+
+.flex-center
+  justify-content: center
+  align-items: center
+
+.flex-end
+  justify-content: flex-end
+
+.flex-bottom
+  align-items: baseline
+
+.v-space-around
+  align-items: center
+
+.columns
+  flex-direction: column
+
+.container-fluid
+  width: 100%
+
+.grow
+  flex-grow: 1
+
+.text-center
+  text-align: center
+
+.height-full
+  height: 100%
+
+.lead
+  font-size: 1.3rem
+
+.l-spacer
+  line-height: 1.5
+  letter-spacing: .2rem
+
+.display-1
+  font-size: 3.5rem
+
+.p-0
+  padding: 0
+
+.fa
+  transition: all .2s ease-in-out
+.fa-facebook:hover
+  color: $facebook
+.fa-instagram:hover
+  color: $ig
+.fa-google-plus:hover
+  color: $google
+.fa-dribbble:hover
+  color: $dribbble
+.fa-github:hover
+  color: $git
+
+@import "mobile/all-styles"
+@import "desktop/mq"
