@@ -75,23 +75,41 @@ $(function () {
       portfolioDots(curIndex2);
     }
   })
-
-  $(window).on('mousewheel', function (e) {
-    if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+  let canScroll = true,
+      scrollController = null;
+  
+  // Mouse Events ---------------------------------
+  $(window).on('mousewheel DOMMouseScroll', function (e) {
+    // when lightbox opens prevent scroll event
+    if (preventSroll()) {
+      return false;
+    }
+    var delta = (e.originalEvent.wheelDelta) ? -e.originalEvent.wheelDelta : e.originalEvent.detail * 20;
+      if (delta > 25 && canScroll) {
       // scroll up
-      if (curIndex > 0) {
-        curIndex -= 1;
-        activeDot(curIndex);
-      }
-      hideScroll(curIndex);
-    } else {
-      // scroll down
+      canScroll = false;
+      clearTimeout(scrollController);
+      scrollController = setTimeout(function(){
+        canScroll = true;
+      }, 800);
       if (curIndex < ($two.find('.dots').length - 1)) {
         curIndex += 1;
         activeDot(curIndex);
       }
       hideScroll(curIndex);
-    }
+    } else if (delta < -25 && canScroll) {
+      // scroll down
+      canScroll = false;
+      clearTimeout(scrollController);
+      scrollController = setTimeout(function(){
+        canScroll = true;
+      }, 800);
+      if (curIndex > 0) {
+        curIndex -= 1;
+        activeDot(curIndex);
+      }
+      hideScroll(curIndex);
+    } 
   })
 
   // Keyboard Events ---------------------------------
@@ -139,6 +157,9 @@ $(function () {
       yDown = evt.touches[0].clientY;
     },
     touchmove : function (evt) {
+      if (preventSroll()) {
+        return false;
+      }
       if ( ! xDown || ! yDown ) {
         return false;
       }
@@ -176,13 +197,13 @@ $(function () {
   $('.lightbox-trigger').click(function () {
     let index = $('.lightbox-trigger').index($(this));
     let imgId = $(this).attr('data-lbimg');
-    $('.lightbox').fadeIn(300)
+    $('.lightbox').fadeIn(300);
     $('.lightbox-img-container img').removeClass('is-img-show');
     $(imgId).addClass('is-img-show');
   })
 
   $('.close-btn').click(() => {
-    $('.lightbox').fadeOut(300)
+    $('.lightbox').fadeOut(300);
   })
 
   $('.back-btn').click(() => {
@@ -248,4 +269,8 @@ function portfolioSlide(index2) {
   $slides.eq(index2).css({
     opacity : '1',
   });
+}
+// when lightbox opens prevent scroll event
+function preventSroll() {
+  return $('.lightbox').css('display') == 'block' ? true : false;
 }
