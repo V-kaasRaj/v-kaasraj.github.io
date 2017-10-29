@@ -2232,7 +2232,8 @@ table {
   .lightbox .container-fluid .fa-caret-left {
     left: 2rem; }
   .lightbox .container-fluid .lightbox-img-container img {
-    width: 60%; } }
+    width: auto;
+    height: 100%; } }
 
 @media (min-width: 992px) {
   :root {
