@@ -1337,6 +1337,14 @@ html {
   border-radius: 1rem;
   background: #ed145b; }
 
+::-moz-selection {
+  background: #fff;
+  color: #0c0c0c; }
+
+::selection {
+  background: #fff;
+  color: #0c0c0c; }
+
 html, body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   position: relative;
@@ -1346,11 +1354,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  line-height: 1.5;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
+  line-height: 1.5; }
 
 .preload * {
   -webkit-transition: none !important;
@@ -1871,9 +1875,13 @@ a, a:hover, a:visited {
       background-color: #ed145b; }
 
 .gallery {
-  -webkit-transform: translateY(-2rem);
-  -ms-transform: translateY(-2rem);
-  transform: translateY(-2rem); }
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -53%);
+  -ms-transform: translate(-50%, -53%);
+  transform: translate(-50%, -53%); }
   .gallery .box {
     width: 100%;
     height: 11rem;
@@ -2211,12 +2219,8 @@ table {
       right: 0; }
     .portfolio .showcase ul .fa-caret-left {
       left: 0; }
-  .gallery {
-    -webkit-transform: translateY(-1.5rem);
-    -ms-transform: translateY(-1.5rem);
-    transform: translateY(-1.5rem); }
-    .gallery .box {
-      margin: 0px auto; }
+  .gallery .box {
+    margin: 0px auto; }
   .contact .contact-wrapper {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);

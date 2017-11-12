@@ -17,6 +17,10 @@
   border-radius: 1rem
   background: $red
 
+::selection
+  background: $white
+  color: $dark
+
 html,body
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
   position: relative
@@ -27,7 +31,6 @@ html,body
   padding: 0
   overflow: hidden
   line-height: 1.5
-  user-select: none
 
 .preload *
   transition: none !important
