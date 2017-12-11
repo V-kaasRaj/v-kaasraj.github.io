@@ -9,7 +9,7 @@
         .slides
           margin: 2.5rem 0
           position: relative
-          +size(35rem,25rem)
+          +size(25rem)
           .slide
             +size(100%,25rem)
             background: $light
@@ -21,7 +21,7 @@
             transition: all .4s ease-in-out
             &.is-slide-show
               opacity: 1
-              z-index: 100
+              z-index: 1
             .slide-link
               +size(2.5rem)
               position: absolute
@@ -41,9 +41,10 @@
                 transform: translateX(-50%) scale(1.2)
           .slide-1
             background: url('../images/deCode.png') no-repeat center
-              size: cover
+              size: contain
           .slide-2
-            background: $red
+            background: url('../images/landing.png') no-repeat center
+              size: contain
           .slide-3
             background: $blue
           .slide-4
@@ -58,6 +59,7 @@
         cursor: pointer
         position: absolute
         z-index: 5
+        box-shadow: 0 0 1.5rem transparentize($dark, .5)
         &:hover
           transform: scale(1.2)
       .fa-caret-right

@@ -1808,7 +1808,7 @@ a, a:hover, a:visited {
     .portfolio .showcase ul li .slides {
       margin: 2.5rem 0;
       position: relative;
-      width: 35rem;
+      width: 25rem;
       height: 25rem; }
       .portfolio .showcase ul li .slides .slide {
         width: 100%;
@@ -1826,7 +1826,7 @@ a, a:hover, a:visited {
         transition: all .4s ease-in-out; }
         .portfolio .showcase ul li .slides .slide.is-slide-show {
           opacity: 1;
-          z-index: 100; }
+          z-index: 1; }
         .portfolio .showcase ul li .slides .slide .slide-link {
           width: 2.5rem;
           height: 2.5rem;
@@ -1863,9 +1863,10 @@ a, a:hover, a:visited {
             transform: translateX(-50%) scale(1.2); }
       .portfolio .showcase ul li .slides .slide-1 {
         background: url("../images/deCode.png") no-repeat center;
-          background-size: cover; }
+          background-size: contain; }
       .portfolio .showcase ul li .slides .slide-2 {
-        background: #ed145b; }
+        background: url("../images/landing.png") no-repeat center;
+          background-size: contain; }
       .portfolio .showcase ul li .slides .slide-3 {
         background: #0f33ff; }
       .portfolio .showcase ul li .slides .slide-4 {
@@ -1880,7 +1881,9 @@ a, a:hover, a:visited {
     line-height: 2em;
     cursor: pointer;
     position: absolute;
-    z-index: 5; }
+    z-index: 5;
+    -webkit-box-shadow: 0 0 1.5rem rgba(12, 12, 12, 0.5);
+    box-shadow: 0 0 1.5rem rgba(12, 12, 12, 0.5); }
     .portfolio .showcase ul [id*='portfolio-motor']:hover {
       -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
@@ -2253,6 +2256,9 @@ table {
     -webkit-transform: translateY(2rem);
     -ms-transform: translateY(2rem);
     transform: translateY(2rem); }
+    .portfolio .showcase ul li .slides {
+      width: 35rem;
+      height: 25rem; }
     .portfolio .showcase ul .fa-caret-right {
       right: 0; }
     .portfolio .showcase ul .fa-caret-left {
