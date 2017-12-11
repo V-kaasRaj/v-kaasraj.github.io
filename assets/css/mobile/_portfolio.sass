@@ -6,28 +6,49 @@
       li
         display: inline-block
         position: relative
-      .slides
-        margin: 2.5rem 0
-        position: relative
-        +size(35rem,25rem)
-        .slide
-          +size(100%,25rem)
-          background: $light
-          position: absolute
-          top: 50%
-          left: 50%
-          transform: translate(-50%,-50%)
-          opacity: 0
-          transition: all .4s ease-in-out
-          &.is-slide-show
-            opacity: 1
-        .slide-2
-          background: $red
-        .slide-3
-          background: $blue
-        .slide-4
-          background: lightgreen
-      .fa
+        .slides
+          margin: 2.5rem 0
+          position: relative
+          +size(35rem,25rem)
+          .slide
+            +size(100%,25rem)
+            background: $light
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            opacity: 0
+            transition: all .4s ease-in-out
+            &.is-slide-show
+              opacity: 1
+              z-index: 100
+            .slide-link
+              +size(2.5rem)
+              position: absolute
+              bottom: 1rem
+              left: 50%
+              background: $white
+              color: $dark
+              border-radius: 100%
+              transform: translateX(-50%)
+              display: flex
+              justify-content: center
+              align-items: center
+              transition: all .2s ease-in-out
+              cursor: pointer
+              box-shadow: 0 0 1.5rem transparentize($dark, 0)
+              &:hover
+                transform: translateX(-50%) scale(1.2)
+          .slide-1
+            background: url('../images/deCode.png') no-repeat center
+              size: cover
+          .slide-2
+            background: $red
+          .slide-3
+            background: $blue
+          .slide-4
+            background: lightgreen
+      [id*='portfolio-motor']
         font-size: 1.5rem
         +size(2em)
         border-radius: 50%

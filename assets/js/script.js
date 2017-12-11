@@ -263,12 +263,7 @@ function portfolioDots(index2) {
 function portfolioSlide(index2) {
   var $slides = $two.find('.slide');
   $slides.removeClass('is-slide-show');
-  $slides.css({
-    opacity : '0',
-  });
-  $slides.eq(index2).css({
-    opacity : '1',
-  });
+  $slides.eq(index2).addClass('is-slide-show');
 }
 // when lightbox opens prevent scroll event
 function preventSroll() {

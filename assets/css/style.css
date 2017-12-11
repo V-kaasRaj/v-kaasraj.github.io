@@ -1805,34 +1805,72 @@ a, a:hover, a:visited {
   .portfolio .showcase ul li {
     display: inline-block;
     position: relative; }
-  .portfolio .showcase ul .slides {
-    margin: 2.5rem 0;
-    position: relative;
-    width: 35rem;
-    height: 25rem; }
-    .portfolio .showcase ul .slides .slide {
-      width: 100%;
-      height: 25rem;
-      background: #3f3f3f;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      opacity: 0;
-      -webkit-transition: all .4s ease-in-out;
-      -o-transition: all .4s ease-in-out;
-      transition: all .4s ease-in-out; }
-      .portfolio .showcase ul .slides .slide.is-slide-show {
-        opacity: 1; }
-    .portfolio .showcase ul .slides .slide-2 {
-      background: #ed145b; }
-    .portfolio .showcase ul .slides .slide-3 {
-      background: #0f33ff; }
-    .portfolio .showcase ul .slides .slide-4 {
-      background: lightgreen; }
-  .portfolio .showcase ul .fa {
+    .portfolio .showcase ul li .slides {
+      margin: 2.5rem 0;
+      position: relative;
+      width: 35rem;
+      height: 25rem; }
+      .portfolio .showcase ul li .slides .slide {
+        width: 100%;
+        height: 25rem;
+        background: #3f3f3f;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        -webkit-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out; }
+        .portfolio .showcase ul li .slides .slide.is-slide-show {
+          opacity: 1;
+          z-index: 100; }
+        .portfolio .showcase ul li .slides .slide .slide-link {
+          width: 2.5rem;
+          height: 2.5rem;
+          position: absolute;
+          bottom: 1rem;
+          left: 50%;
+          background: #fff;
+          color: #0c0c0c;
+          border-radius: 100%;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-transition: all .2s ease-in-out;
+          -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+          cursor: pointer;
+          -webkit-box-shadow: 0 0 1.5rem #0c0c0c;
+          box-shadow: 0 0 1.5rem #0c0c0c; }
+          .portfolio .showcase ul li .slides .slide .slide-link:hover {
+            -webkit-transform: translateX(-50%) scale(1.2);
+            -ms-transform: translateX(-50%) scale(1.2);
+            transform: translateX(-50%) scale(1.2); }
+      .portfolio .showcase ul li .slides .slide-1 {
+        background: url("../images/deCode.png") no-repeat center;
+          background-size: cover; }
+      .portfolio .showcase ul li .slides .slide-2 {
+        background: #ed145b; }
+      .portfolio .showcase ul li .slides .slide-3 {
+        background: #0f33ff; }
+      .portfolio .showcase ul li .slides .slide-4 {
+        background: lightgreen; }
+  .portfolio .showcase ul [id*='portfolio-motor'] {
     font-size: 1.5rem;
     width: 2em;
     height: 2em;
@@ -1843,7 +1881,7 @@ a, a:hover, a:visited {
     cursor: pointer;
     position: absolute;
     z-index: 5; }
-    .portfolio .showcase ul .fa:hover {
+    .portfolio .showcase ul [id*='portfolio-motor']:hover {
       -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
       transform: scale(1.2); }
