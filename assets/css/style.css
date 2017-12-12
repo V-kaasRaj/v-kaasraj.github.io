@@ -1526,13 +1526,13 @@ a, a:hover, a:visited {
     flex-grow: 1; }
 
 .header {
-  padding: 2rem .5rem 0; }
+  padding: 1.5rem .3rem 0; }
   .header .hamburger-wrapper {
     position: relative;
     z-index: 200; }
     .header .hamburger-wrapper .hamburger-icon {
-      width: 2.5rem;
-      height: 0.3rem;
+      width: 2.2rem;
+      height: 0.2rem;
       background: #fff;
       border-radius: 1rem;
       cursor: pointer;
