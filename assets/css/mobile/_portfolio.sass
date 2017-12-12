@@ -22,6 +22,22 @@
             &.is-slide-show
               opacity: 1
               z-index: 1
+            &:hover
+              .slide-link
+                transform: translate(-50%, -50%) scale(1.2)
+              .slide-info
+                opacity: 1
+            .slide-info
+              width: 80%
+              padding: .8rem
+              position: absolute
+              bottom: 30%
+              left: 50%
+              transform: translateX(-50%)
+              background: transparentize($dark,.3)
+              opacity: 0
+              transition: all .2s ease-in-out
+              letter-spacing: .15rem
             .slide-link
               +size(2.5rem)
               position: absolute
@@ -37,16 +53,15 @@
               transition: all .2s ease-in-out
               cursor: pointer
               box-shadow: 0 0 1.5rem transparentize($dark, 0)
-              &:hover
-                transform: translateX(-50%) scale(1.2)
           .slide-1
-            background: url('../images/deCode.png') no-repeat center
+            background: url('../images/decode.png') no-repeat center
               size: contain
           .slide-2
             background: url('../images/landing.png') no-repeat center
               size: contain
           .slide-3
-            background: $blue
+            background: url('../images/landing-form.png') no-repeat center
+              size: contain
           .slide-4
             background: lightgreen
       [id*='portfolio-motor']

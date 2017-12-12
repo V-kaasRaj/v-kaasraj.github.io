@@ -1827,6 +1827,27 @@ a, a:hover, a:visited {
         .portfolio .showcase ul li .slides .slide.is-slide-show {
           opacity: 1;
           z-index: 1; }
+        .portfolio .showcase ul li .slides .slide:hover .slide-link {
+          -webkit-transform: translate(-50%, -50%) scale(1.2);
+          -ms-transform: translate(-50%, -50%) scale(1.2);
+          transform: translate(-50%, -50%) scale(1.2); }
+        .portfolio .showcase ul li .slides .slide:hover .slide-info {
+          opacity: 1; }
+        .portfolio .showcase ul li .slides .slide .slide-info {
+          width: 80%;
+          padding: .8rem;
+          position: absolute;
+          bottom: 30%;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+          background: rgba(12, 12, 12, 0.7);
+          opacity: 0;
+          -webkit-transition: all .2s ease-in-out;
+          -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+          letter-spacing: .15rem; }
         .portfolio .showcase ul li .slides .slide .slide-link {
           width: 2.5rem;
           height: 2.5rem;
@@ -1857,18 +1878,15 @@ a, a:hover, a:visited {
           cursor: pointer;
           -webkit-box-shadow: 0 0 1.5rem #0c0c0c;
           box-shadow: 0 0 1.5rem #0c0c0c; }
-          .portfolio .showcase ul li .slides .slide .slide-link:hover {
-            -webkit-transform: translateX(-50%) scale(1.2);
-            -ms-transform: translateX(-50%) scale(1.2);
-            transform: translateX(-50%) scale(1.2); }
       .portfolio .showcase ul li .slides .slide-1 {
-        background: url("../images/deCode.png") no-repeat center;
+        background: url("../images/decode.png") no-repeat center;
           background-size: contain; }
       .portfolio .showcase ul li .slides .slide-2 {
         background: url("../images/landing.png") no-repeat center;
           background-size: contain; }
       .portfolio .showcase ul li .slides .slide-3 {
-        background: #0f33ff; }
+        background: url("../images/landing-form.png") no-repeat center;
+          background-size: contain; }
       .portfolio .showcase ul li .slides .slide-4 {
         background: lightgreen; }
   .portfolio .showcase ul [id*='portfolio-motor'] {
@@ -2031,9 +2049,9 @@ a, a:hover, a:visited {
   -ms-transform: translateY(-1rem);
   transform: translateY(-1rem); }
   .contact .contact-wrapper {
-    -webkit-transform: translateY(-4rem);
-    -ms-transform: translateY(-4rem);
-    transform: translateY(-4rem); }
+    -webkit-transform: translateY(-3rem);
+    -ms-transform: translateY(-3rem);
+    transform: translateY(-3rem); }
     .contact .contact-wrapper h2 {
       color: #ed145b;
       letter-spacing: .2rem;
