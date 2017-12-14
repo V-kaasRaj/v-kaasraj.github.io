@@ -1888,7 +1888,8 @@ a, a:hover, a:visited {
         background: url("../images/landing-form.png") no-repeat center;
           background-size: contain; }
       .portfolio .showcase ul li .slides .slide-4 {
-        background: lightgreen; }
+        background: url("../images/split-landing.png") no-repeat center;
+          background-size: contain; }
   .portfolio .showcase ul [id*='portfolio-motor'] {
     font-size: 1.5rem;
     width: 2em;
